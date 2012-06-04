@@ -1,0 +1,28 @@
+<template name='ipTextAreaShow'>
+  <div id ='ipshow{{key}}' class='iedit'>
+    {{#markdown}}{{attr}}{{/markdown}}
+  </div>
+</template>
+
+<template name='ipTextAreaEdit'>
+  <div id='ipedit{{key}}' class="control-group" style='display:none;'>
+    <label for="edit-{{key}}" class="control-label">{{key}}</label>
+    <div class="controls">
+      <textarea id="edit-{{key}}" class="edit-area" style="width:100%; height:300px;">{{attr}}</textarea>
+    </div>
+  </div>
+</template>
+
+<template name='ipTextFieldShow'>
+  <span id="ipshow{{key}}" class="iedit">{{attr}}</span>
+</template>
+
+<template name='ipTextFieldEdit'>
+  <div id='ipedit{{key}}' class="control-group" style='display:none;'>
+    <div class="controls">
+      <input id="edit-{{key}}" class="edit-area" value="{{attr}}"></textarea>
+    </div>
+  </div>
+</template>
+
+
