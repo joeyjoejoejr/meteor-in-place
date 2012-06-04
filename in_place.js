@@ -37,10 +37,11 @@ if(Meteor.is_client){
     };
     
     var blurHandler = function (e) {
+      var auth = Session.get('auth') || "none";
       Meteor.call('editField', {
-        _id:self._id, editable:$('#edit-'+key).val(), key: key, model: modelName
-        }, function(err,res){
-          console.log(err);
+        _id:self._id, editable:$('#edit-'+key).val(), key: key, model: modelName,
+        auth:auth}, function(err,res){
+          console.log(res);
         });
       $('#ipedit'+ key).hide();
       $('#ipshow' + key).show();
